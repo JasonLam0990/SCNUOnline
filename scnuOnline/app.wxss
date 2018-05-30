@@ -21,6 +21,7 @@ input{
     background: #eeeeee;
     margin: 0 auto;
 }
+git remote add local https://github.com/JasonLam0990/scnuOnline.git
 
 .section-bar{
     width:100%;

@@ -17,18 +17,18 @@
       <view class="weui-tab__panel">
         <!-- 第一个选项 -->
         <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
-          <view class='course-box' wx:for="{{fakeCourses}}" bindtap='onClick' data-playurl="{{item.playUrl}}" data-duration="{{item.duration}}" data-title="{{item.title}}">
+          <view class='course-box' wx:for="{{fakeCourses}}" bindtap='onClick' data-playurl="{{item.playUrl}}" data-duration="{{item.duration}}" data-title="{{item.title}}" data-id="{{item.id}}">
             <view class='number-label'>{{index+1}}</view>
             <text class='course-name'>{{item.title}}</text>
-            <image class='headphone-pic' src='/images/headphone.png'></image>
+            <image class='headphone-pic' src="{{item.audioplayed === true ?'/images/headphone.png':'/images/headphone-after.png'}}"></image>
           </view>
         </view>
         <!-- 第二个选项 -->
-        <view class="weui-tab__content" hidden="{{activeIndex != 1}}" bindtap='onVideoClick' data-videoUrl="{{item.videoUrl}}">
-          <view class='course-box' wx:for="{{fakeCourses}}">
+        <view class="weui-tab__content" hidden="{{activeIndex != 1}}" >
+          <view class='course-box' wx:for="{{fakeCourses}}" bindtap='onVideoClick' data-videoUrl="{{item.videoUrl}}" data-id="{{item.id}}">
             <view class='number-label'>{{index+1}}</view>
             <text class='course-name'>{{item.title}}</text>
-            <image class='headphone-pic' src='/images/video.png'></image>
+            <image class='headphone-pic' src="{{item.videoplayed === true ?'/images/video.png':'/images/video-after.png'}}"></image>
           </view>
         </view>
         <!-- 第三个选项 -->
