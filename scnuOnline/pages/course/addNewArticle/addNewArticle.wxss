@@ -1,0 +1,4 @@
+/* pages/course/addNewArticle/addNewArticle.wxss */
+page{
+  font-size: 38rpx;
+}

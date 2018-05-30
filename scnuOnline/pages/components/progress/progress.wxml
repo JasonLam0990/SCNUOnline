@@ -1,0 +1,5 @@
+<view class="progress-bar" id="progressBar" click="progressClick">
+  <view class="bar-inner">
+    <view class="progress" ref="progress" style="width: {{width}}px"></view>
+  </view>
+</view>
