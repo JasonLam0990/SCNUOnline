@@ -13,6 +13,25 @@
   height: 100%;
   vertical-align:middle;
 }
+.main-title{
+  font-weight: 900;
+  font-size: 50rpx;
+  text-align: center;
+  position: relative;
+  bottom: 225rpx;
+  height: 0;
+  text-shadow: 0 2px #fff, 2px 0 #fff, -2px 0 #fff, 0 -2px #fff;
+  color: #5ec708;
+}
+.speaker{
+  font-weight: 700;
+  font-size: 28rpx;
+  text-align: center;
+  position: relative;
+  bottom: 150rpx;
+  height: 0;
+  color: #606060;
+}
 
 page,
 .page,

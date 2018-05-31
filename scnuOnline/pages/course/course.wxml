@@ -1,5 +1,7 @@
 <!--pages/course/course.wxml-->
 <image class='banner' mode="widthFix" src='/images/banner.jpg'></image>
+<view class='main-title'>{{mainTitle}}</view>
+<view class='speaker'>主讲：{{speaker}}</view>
 
  <view class="page">
   <view class="page__bd">
