@@ -1,9 +1,7 @@
 // pages/course/course.js
 var app = getApp()
-var api = require('../../utils/api.js')
 Page({
   data: {
-    courseId:null,
     fakeCourses: [
       {
         id:"111",
@@ -29,6 +27,7 @@ Page({
       {
         id: "444",
         title: "第三章 上机操作基础",
+        author: '许巍',
         playUrl: 'http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&uin=346897220&vkey=6292F51E1E384E06DCBDC9AB7C49FD713D632D313AC4858BACB8DDD29067D3C601481D36E62053BF8DFEAF74C0A5CCFADD6471160CAF3E6A&fromtag=46',
         duration: 556,
         videoUrl: 'http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400',
@@ -82,7 +81,7 @@ Page({
     ],
     fakeForums: [
       {
-        "title": "请同学们谈谈MOOC、微课和翻转课堂的区别请同学们谈谈MOOC、微课和翻转课堂的区别",
+        "title": "请同学们谈谈MOOC、微课和翻转课堂的区别",
         "user": "胡英芹",
         "commentNumber":56,
         "time": "04-11 16:50"
@@ -112,7 +111,7 @@ Page({
         "time": "04-11 16:50"
       },
       {
-        "title": "请同学们谈谈MOOC、微课和翻转课堂的区别",
+        "title": "请同学们谈谈MOOC、微课和翻转课堂的区",
         "user": "胡英芹",
         "commentNumber": 56,
         "time": "04-11 16:50"
@@ -129,42 +128,27 @@ Page({
     duration: '',
     isplay:false,
     first:false,
-    title:'',
+    mainTitle:'',
     speaker: ''
   },
   onLoad: function (options) {
-    // let title = options.title
-    let courseName = "远程学习方法"
+    // let mainTitle = options.mainTitle
+    let mainTitle = "远程学习方法"
     // let speaker = options.speaker
-    let courseTeacher = "卢和琰"
+    let speaker = "卢和琰"
     var that = this;
     wx.getSystemInfo({ //根据手机的宽度计算滑条的位置
       success: function (res) {
         var sliderWidth = res.windowWidth / 3 - 10
         that.setData({
           sliderLeft: (res.windowWidth / that.data.tabs.length - sliderWidth) / 2,
-          courseName: courseName,
-          courseTeacher: courseTeacher
+          mainTitle: mainTitle,
+          speaker:speaker
         });
       }
     });
-    api.getList(options.courseId).then((res) => {
-      this.setData({
-        fakeCourses:res.data
-      })
-    }).catch((err) => {
-      console.log(err)
-    })
-    api.getArticleList(courseId).then((res) => {
-      this.setData({
-        fakeForums: res.data
-      })
-    }).catch((err) => {
-      console.log(err)
-    })
   },
   onClick: function (event) {
-    console.log("-------------------")
     let playurl = event.currentTarget.dataset.playurl;
     let duration = event.currentTarget.dataset.duration;
     let title = event.currentTarget.dataset.title;
@@ -175,6 +159,7 @@ Page({
     for (let i of courses) {
       if (i.id == id) {
         i.audioplayed = true;
+
       }
       this.setData({
         fakeCourses: courses,
@@ -229,7 +214,7 @@ Page({
       const currentTime = manage.currentTime
       this.setData({
         currentTime: this._formatTime(currentTime),
-        percent: currentTime / manage.duration
+        percent: currentTime / duration
       })
     })
   },
@@ -270,19 +255,16 @@ Page({
       activeIndex: e.currentTarget.id
     });
   },
-  gotoAdd: function (event) {
-    var targetUrl = "addNewArticle/addNewArticle";
-    targetUrl = targetUrl + "?courseId=" + this.data.courseId;
+  gotoAdd: function () {
+
     wx.navigateTo({
-      url: targetUrl
+      url: 'addNewArticle/addNewArticle'
     })
   },
-  gotoDetail: function (event) {
-    var targetUrl = "forumDetail/forumDetail";
-   // targetUrl = targetUrl + "?noteId=" + event.currentTarget.dataset.noteId + "&courseId=" + this.data.courseId + "&content=" + event.currentTarget.dataset.content;
-    targetUrl = targetUrl + "?article=" + event.currentTarget.dataset;
+  gotoDetail: function () {
+
     wx.navigateTo({
-      url: targetUrl
+      url: 'forumDetail/forumDetail'
     })
   },
 });

@@ -1,25 +1,25 @@
 <!--pages/course/forumDetail/forumDetail.wxml-->
 
-        <view class='forum-box' >
-          <view class='title'>{{fakeForums.title}}</view>
+        <view class='forum-box' wx:for="{{fakeForums}}" bindtap='gotoDetail'>
+          <view class='title'>{{item.title}}</view>
           <view class='section-line'></view>
           <view class='info-box'>
             <view class='label'>
               <image class='pic' src='/images/user.png'></image>
-              <text>{{fakeForums.userName}}</text>
+              <text>{{item.user}}</text>
             </view> 
 
             <view class='label'>
               <image class='pic' src='/images/time.png'></image>
-              <text>{{fakeForums.time}}</text>
+              <text>{{item.time}}</text>
             </view>
           </view>
 
-          <view class='content'>{{fakeForums.content}}</view>
+          <view class='content'>{{item.content}}</view>
             
           <view class='section-bar'></view>
           
-          <view class='remark-title'>回复({{fakeForums.commentNumber}})</view>
+          <view class='remark-title'>回复({{item.commentNumber}})</view>
           <view class='section-line'></view>
 
           <view class='remark-box' wx:for="{{remark}}">

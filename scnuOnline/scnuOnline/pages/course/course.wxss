@@ -15,13 +15,14 @@
 }
 .main-title{
   font-weight: 900;
-  font-size: 50rpx;
-  text-align: center;
+  font-size: 48rpx;
   position: relative;
+  text-align: center;
   bottom: 225rpx;
   height: 0;
   text-shadow: 0 2px #fff, 2px 0 #fff, -2px 0 #fff, 0 -2px #fff;
   color: #5ec708;
+  padding: 0 40rpx;
 }
 .speaker{
   font-weight: 700;
@@ -31,6 +32,7 @@
   bottom: 150rpx;
   height: 0;
   color: #606060;
+  padding: 0 130rpx;
 }
 
 page,
@@ -106,7 +108,7 @@ page,
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 30rpx;
+  margin: 0 30rpx 0 0rpx;
   padding: 5rpx;
 }
 .course-name{
@@ -162,7 +164,7 @@ page,
 .box{
   height: 50rpx;
   padding-left: 20rpx;
-  padding-bottom: 100rpx;
+  padding-bottom: 110rpx;
 }
 .btn{
   width: 120rpx;
@@ -170,10 +172,14 @@ page,
   float: left;
 }
 .box .title{
-  font-size: 38rpx;
+  width: 500rpx;
+  font-size: 34rpx;
   color: #3ca300;
   position: absolute;
-  left: 170rpx;
+  overflow: hidden;  
+  text-overflow:ellipsis; 
+  white-space:nowrap; 
+  left: 150rpx;
   top: 80rpx;
 }
 .box .time {

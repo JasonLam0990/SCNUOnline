@@ -2,5 +2,5 @@
   "usingComponents": {
     "progress-bar": "../components/progress/progress"
   },
-  "navigationBarTitleText": "华师在线"
+  "navigationBarTitleText": "课程内容"
 }

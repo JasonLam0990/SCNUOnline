@@ -38,6 +38,7 @@
 
 .remark-box{
   width: 100%;
+  min-height: 150rpx;
   padding: 30rpx 30rpx 30rpx;
   margin: 8rpx 0 6rpx 0;
   background: #ffffff;
@@ -67,9 +68,13 @@
 .user-label{
   margin-left: 20rpx;
   float: left;
+  width: 260rpx;
+  overflow: hidden;  
+  text-overflow:ellipsis; 
+  white-space:nowrap; 
 }
 .time-label{
-  margin-left: 430rpx;
+  margin-left: 335rpx;
 }
 .remark-content{
   width: 600rpx;

@@ -1,0 +1,10 @@
+<!--pages/nav/nav.wxml-->
+<view class='top'></view>
+<view class='courselists' wx:for="{{courseLists}}" bindtap='onItemClick' data-course_name="{{item.courseName}}" data-course_teacher="{{item.courseTeacher}}">
+  <image src='/images/{{item.courseType}}.jpg' class='type-pic'></image>
+  <view class='text-box'>
+    <view class='course-name'>{{item.courseName}}</view>
+    <view class='course-teacher'>主讲：{{item.courseTeacher}}</view>
+  </view>
+</view>
+
