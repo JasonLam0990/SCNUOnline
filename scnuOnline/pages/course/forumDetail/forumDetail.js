@@ -1,20 +1,20 @@
 // pages/course/forumDetail/forumDetail.js
+var api = require('../../../utils/api.js')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    fakeForums: [
+    fakeForums: 
       {
-        "title": "请同学们谈谈MOOC、微课的区别",
-        "user": "胡英芹",
+        "title": "请同学们谈谈MOOC、微课",
+        "userName": "胡英芹",
         "commentNumber": 56,
         "time": "04-11 16:50",
-        "content":"远程教育是一种以学生自主学习为主，教师指导为辅，通过媒体人格人格人格人格热狗热狗二哥热狗二哥二哥二哥二哥二哥二哥二个人过二哥二哥二哥二哥二哥热狗二哥二过热过热个人过二个人个人个人过热过热个人过二个人个人个人个人二哥热狗热greg二个人个人过二哥二个",
+        "content":"远程教育是一种以学生自主学习为主，教师指导为辅，通过媒体人格人格人格人格热狗热狗二哥热狗二哥二哥二哥二",
       },
-    ],
-    "remark": [
+    remark: [
       {
         "userName": "最冷一天",
         "avatarUrl": "http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg",
@@ -35,8 +35,10 @@ Page({
       },
     ],
   },
-  gotoReply: function () {
+  gotoReply: function (event) {
+
     wx.navigateTo({
+      fakeForums
       url: 'reply/reply'
     })
   },
@@ -44,21 +46,28 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    this.setData({
+      fakeForums:options.article
+    })
+    api.getReplyList(fakeForums.courseId, fakeForums.noteId).then((res) => {
+      this.setData({
+        remark: res.data
+      })
+    }).catch((err) => {
+      console.log(err)
+    })
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
   },
 
   /**

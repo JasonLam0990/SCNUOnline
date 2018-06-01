@@ -1,24 +1,12 @@
 <!--pages/course/addNewArticle/addNewArticle.wxml-->
 <form bindsubmit="onSave">
-  <input name="label" placeholder="文章标题"/>
+  <input name="title" placeholder="文章标题"/>
 
   <view class='section-line'></view>
 
-  <textarea name="opinion" placeholder="分享你的观点" />
+  <textarea name="content" placeholder="分享你的观点" />
 
-  <view class="content">
         <!--<image class="microphone" src="/images/microphone.png"></image>-->
-    <view class="imgcontainer">
-      <block wx:for="{{tempFilePaths}}" wx:key="*this">
-        <view class="up">
-          <image data-index="{{index}}" catchtap="delPictrue" class="del" src="/images/del.png"></image>
-          <image aspectFill src="{{item}}"></image>
-        </view>
-      </block>
-      <image hidden="{{tempFilePaths==''}}" catchtap="upLoad" class="plus" src="/images/add.png"></image>
-    </view>
-    <image hidden="{{tempFilePaths!=''}}" catchtap="upLoad" class="picture" src="/images/add.png"></image>
-  </view>
 
   <button class="submit-btn" formType="submit">发表</button> 
 </form>

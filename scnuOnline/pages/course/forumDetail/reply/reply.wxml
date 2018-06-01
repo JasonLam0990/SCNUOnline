@@ -1,6 +1,8 @@
 <!--pages/course/forumDetail/reply/reply.wxml-->
+<form bindsubmit="onSave">
 <textarea name="opinion" placeholder="分享你的观点" />
 
 <view class='section-line'></view>
 
 <button class="submit-btn" formType="submit">回复</button> 
+</form>

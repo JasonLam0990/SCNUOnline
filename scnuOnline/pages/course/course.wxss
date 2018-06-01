@@ -109,8 +109,13 @@ page,
   margin: 0 30rpx;
   padding: 5rpx;
 }
+.course-name{
+  margin: 30rpx 0;
+  width: 480rpx;
+}
 .course-box{
-  height: 115rpx;
+  width: 690rpx;
+  padding: 0 30rpx;
   display: flex;
   align-items: center;
   border-bottom: 1px #eee solid;
@@ -123,22 +128,21 @@ page,
   float: right;
 } 
 .forum-box{
-  height: 140rpx;
+  width: 690rpx;
+  padding: 0 30rpx;
   border-bottom: 1px #eee solid;
 }
 .title{
   position: relative;
   top: 25rpx;
-  left: 40rpx;
+  margin-left: 20rpx;
   margin-bottom: 20rpx;
 }
 .label{
   color: #CCCCCC;
-  position: relative;
-  top: 15rpx;
+  display: inline-block;
   font-size: 28rpx;
-  float: left;
-  margin-left: 40rpx;
+  margin: 15rpx 0 15rpx 20rpx;
 }
 .pic{
   margin-right: 10rpx;

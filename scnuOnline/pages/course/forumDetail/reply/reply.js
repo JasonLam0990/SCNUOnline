@@ -1,4 +1,5 @@
 // pages/course/forumDetail/reply/reply.js
+var api = require('../../../utils/api.js')
 Page({
 
   /**
@@ -12,9 +13,20 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    
   },
-
+  onSave(e) {
+    var article = {}
+    article.content = e.detail.value.content
+    article.title = e.detail.value.title
+    article.time = api.getFormatTime()
+    console.log(article)
+    article.courseId = this.data.noteId
+    article.userName = getApp().globalData.userInfo.nickName
+    api.newArticle(article).then((res) => { }).catch((err) => {
+      console.log(err)
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -26,7 +38,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    
   },
 
   /**
