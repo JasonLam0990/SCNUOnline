@@ -67,6 +67,11 @@ time：发布时间
  <img src="/project-photo/WechatIMG252.jpeg" width=30%/>
 </center>
 
+### 点击进度条跳转到播放器页面，可以拖动进度条，具体代码见项目
+<center>
+ <img src="/project-photo/WechatIMG279.jpg" width=30%/>
+</center>
+
 
 ### 点击上方导航栏切换后，点击list内容，跳转到视频播放页面，使用微信小程序原声组件video
 <center>
