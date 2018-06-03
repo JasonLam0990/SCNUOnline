@@ -1,0 +1,14 @@
+.progress-bar {
+    height: 30px;
+}
+.progress-bar .bar-inner {
+    position: relative;
+    top: 13px;
+    height: 4px;
+    background: rgba(0,0,0,0.3);
+}
+.progress-bar .bar-inner .progress {
+    position: absolute;
+    height: 100%;
+    background: #3ca300;
+}

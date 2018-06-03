@@ -1,0 +1,29 @@
+ <image class='bg' src='/images/bg.png'></image>
+<view class='abc'>
+  <view class='title'>{{name}}</view>
+</view>
+
+  <view class="player">
+    <view class="normal-player">
+      <swiper class="middle" style="height: 700rpx">
+        <swiper-item class="middle-l" style="overflow: visible">
+          <view class="cd-wrapper">
+            <view class="cd {{cdCls}}">
+              <image src="/images/audio.png" alt="" class="image"/>
+            </view>
+          </view>
+          <view class="currentLyricWrapper"></view>
+        </swiper-item>
+      </swiper>
+    </view>
+  </view>
+
+<view class="sliderCont">
+    <text>{{curTime}}</text>
+    <slider bindchange="slider1change" step="1" value="{{reCurTime}}" min="0" max="{{reEndTime}}" activeColor="#3ca300"/>
+    <text>{{endTime}}</text>
+</view>
+
+
+<image src="{{isplay === false ? '/images/begin_1.png' : '/images/stop_1.png'}}" bindtap="audioPlay" class="playBtn"></image>
+ 

@@ -1,0 +1,18 @@
+{
+  "pages": [
+    "pages/nav/nav",
+    "pages/course/course",
+    "pages/course/addNewArticle/addNewArticle",
+    "pages/course/forumDetail/forumDetail",
+    "pages/course/forumDetail/reply/reply",
+    "pages/course/forumDetail/nowplay/nowplay",
+    "pages/course/video/video",
+    "pages/course/nowPlay/nowPlay"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  }
+}

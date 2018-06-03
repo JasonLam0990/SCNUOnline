@@ -1,0 +1,84 @@
+/* pages/course/forumDetail/forumDetail.wxss */
+.title{
+  margin: 30rpx 0 30rpx 40rpx;
+  font-weight: 500;
+  font-size: 42rpx;
+}
+.info-box{
+  display: block;
+}
+.label{
+  color: #CCCCCC;
+  position: relative;
+  top: 15rpx;
+  font-size: 30rpx;
+  float: left;
+  margin-left: 40rpx;
+}
+.pic{
+  margin-right: 10rpx;
+  width: 30rpx;
+  height: 30rpx;
+}
+.content{
+  color: #808080;
+  margin-top: 80rpx;
+  margin-bottom: 40rpx;
+  padding: 0 40rpx;
+  text-indent: 2em;
+  line-height: 1.8em;
+  font-size: 36rpx;
+}
+
+.remark-title{
+  margin: 15rpx 0 15rpx 40rpx;
+  font-weight: 500;
+  font-size: 36rpx;
+}
+
+.remark-box{
+  width: 100%;
+  min-height: 150rpx;
+  padding: 30rpx 30rpx 30rpx;
+  margin: 8rpx 0 6rpx 0;
+  background: #ffffff;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 2px 5px #eeeeee;
+}
+
+.avatar{
+  position: relative;
+  margin-left: 8rpx;
+  float: left;
+}
+.avatar image{
+  width: 80rpx;
+  height: 80rpx;
+  top: 10rpx;
+  vertical-align: middle;
+}
+.info{
+  color: #CCCCCC;
+  position: relative;
+  bottom: 10rpx;
+  display: inline-block;
+  font-size: 32rpx;
+}
+.user-label{
+  margin-left: 20rpx;
+  float: left;
+  width: 260rpx;
+  overflow: hidden;  
+  text-overflow:ellipsis; 
+  white-space:nowrap; 
+}
+.time-label{
+  margin-left: 335rpx;
+}
+.remark-content{
+  width: 600rpx;
+  margin-left: 112rpx;
+  font-size: 32rpx;
+  color: #808080;
+}

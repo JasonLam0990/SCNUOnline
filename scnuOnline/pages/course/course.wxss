@@ -1,0 +1,194 @@
+/* pages/course/course.wxss */
+.banner img{
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 70%;
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    background-size: cover;
+}
+.banner{
+  width: 100%;
+  height: 100%;
+  vertical-align:middle;
+}
+.main-title{
+  font-weight: 900;
+  font-size: 48rpx;
+  position: relative;
+  text-align: center;
+  bottom: 225rpx;
+  height: 0;
+  text-shadow: 0 2px #fff, 2px 0 #fff, -2px 0 #fff, 0 -2px #fff;
+  color: #5ec708;
+  padding: 0 40rpx;
+}
+.speaker{
+  font-weight: 700;
+  font-size: 28rpx;
+  text-align: center;
+  position: relative;
+  bottom: 150rpx;
+  height: 0;
+  color: #606060;
+  padding: 0 130rpx;
+}
+
+page,
+.page,
+.page__bd{
+    height: 100%;
+    font-size: 32rpx;
+}
+.page__bd{
+    padding-bottom: 0;
+}
+
+.weui-navbar {
+  background: #545454;
+  color: #fff;
+  display: flex;
+  position: absolute;
+  z-index: 500;
+  top: 0;
+  width: 100%;
+  border-bottom: 1rpx solid #CCCCCC;
+}
+.weui-navbar__item {
+  position: relative;
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  padding: 26rpx 0;
+  text-align: center;
+  font-size: 0;
+}
+/* .weui-navbar__item.weui-bar__item_on {
+  color: #1AAD19;
+} */
+.weui-navbar__slider {
+  position: absolute;
+  content: " ";
+  left: 0;
+  bottom: 0;
+  width: 220rpx;
+  height: 6rpx;
+  background-color: #1AAD19;
+  transition: transform .3s;
+}
+.weui-navbar__title {
+  display: inline-block;
+  font-size: 30rpx;
+  max-width: 8em;
+  width: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+.weui-tab {
+  position: relative;
+  height: 100%;
+}
+.weui-tab__panel {
+  /**border和padding计算入width之内*/
+  padding-top: 100rpx;
+  box-sizing: border-box;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.number-label{
+  width: 30rpx;
+  height: 30rpx;
+  background: #e8e8e8;
+  color: #b6b6b6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 30rpx 0 0rpx;
+  padding: 5rpx;
+}
+.course-name{
+  margin: 30rpx 0;
+  width: 480rpx;
+}
+.course-box{
+  width: 690rpx;
+  padding: 0 30rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px #eee solid;
+}
+.headphone-pic{
+  position: absolute;
+  right: 50rpx;
+  width: 50rpx;
+  height: 40rpx;
+  float: right;
+} 
+.forum-box{
+  width: 690rpx;
+  padding: 0 30rpx;
+  border-bottom: 1px #eee solid;
+}
+.title{
+  position: relative;
+  top: 25rpx;
+  margin-left: 20rpx;
+  margin-bottom: 20rpx;
+}
+.label{
+  color: #CCCCCC;
+  display: inline-block;
+  font-size: 28rpx;
+  margin: 15rpx 0 15rpx 20rpx;
+}
+.pic{
+  margin-right: 10rpx;
+  width: 26rpx;
+  height: 26rpx;
+}
+
+
+
+
+.fixx{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+}
+.box{
+  height: 50rpx;
+  padding-left: 20rpx;
+  padding-bottom: 110rpx;
+}
+.btn{
+  width: 120rpx;
+  height: 120rpx;
+  float: left;
+  z-index: 99;
+}
+.box .title{
+  width: 500rpx;
+  font-size: 34rpx;
+  color: #3ca300;
+  position: absolute;
+  overflow: hidden;  
+  text-overflow:ellipsis; 
+  white-space:nowrap; 
+  left: 150rpx;
+  top: 80rpx;
+}
+.box .time {
+  color: #808080;
+  font-size: 30rpx;
+}
+.box .text-box{
+  position: absolute;
+  left: 170rpx;
+  top: 130rpx;
+}

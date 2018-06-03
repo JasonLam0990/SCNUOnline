@@ -1,0 +1,101 @@
+/**app.wxss**/
+.add{  
+  color: #ffffff;  
+  position: fixed;  
+  display: flex;  
+  align-items: center;  
+  justify-content: center;  
+  bottom: 25rpx;  
+  right:25rpx;  
+  width: 100rpx;  
+  height: 100rpx;
+  z-index: 99;
+}
+
+input{
+  margin: 30rpx 0 30rpx 40rpx;
+}
+.section-line{
+/* 分界线 */
+    width:90%;
+    height:1rpx;
+    background: #eeeeee;
+    margin: 0 auto;
+}
+git remote add local https://github.com/JasonLam0990/scnuOnline.git
+
+.section-bar{
+    width:100%;
+    height:12rpx;
+    background: #eeeeee;
+}
+
+textarea{
+  font-size: 36rpx;
+  padding:50rpx;
+  width:100%;
+  box-sizing: border-box;
+  height: 500rpx;
+  background: #ffffff;
+}
+
+.content{
+  padding: 10rpx 20rpx;
+  background: #ffffff;
+  position:relative;
+  min-height:200rpx;
+}
+.content .picture{
+  width:150rpx;
+  height:150rpx;
+  position:absolute;
+  top:  35rpx;
+  left: 40rpx;
+  z-index: 999;
+}
+.imgcontainer{
+  width: 100%;
+  display: flex;
+  flex-wrap:wrap;
+  /*justify-content:space-between;*/
+}
+.up{
+  width: 150rpx;
+  height:150rpx;
+  padding: 20rpx;
+  position: relative;
+}
+.up image:nth-child(2){
+  width:100%;
+  height:100%;
+}
+.plus{
+  width: 150rpx;
+  height:150rpx;
+  box-sizing: border-box;
+  margin: 20rpx;
+}
+.del{
+  position:absolute;
+  right:10rpx;
+  top:10rpx;
+  width:30rpx;
+  height:30rpx;
+  padding:2rpx;
+}
+.submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40rpx 5%;
+    margin-top: 55rpx;
+    height: 80rpx;
+    border-radius: 10rpx;
+    text-align: center;
+    background-color: #09ba07;
+    color: #fff;
+    font-size: 12pt;
+    line-height: 150%;
+    padding: 0;
+    border: none;
+}

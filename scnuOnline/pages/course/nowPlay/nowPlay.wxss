@@ -1,0 +1,189 @@
+/* pages/course/nowPlay/nowPlay.wxss */
+
+.content{
+    width: 100%;
+    height: 100%;
+}
+.cd{
+    width: 600rpx;
+    height: 600rpx;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-top: 20%;
+    position: relative;
+    bottom: 50rpx;
+}
+.cd_b{
+    width: 100%;
+    height: 100%; 
+}
+.cd.active{
+    animation: cd 20s linear infinite forwards;
+}
+.cd_g{
+    width: 360rpx;
+    height: 260rpx;
+    position: absolute;
+    left:10%;
+    top: 4%;
+    z-index: 10;
+    transform-origin:0 0;
+    animation: cga 0.5s linear forwards;
+}
+.cd_g.active{
+    animation: cg 0.5s linear forwards;
+}
+.webPic{
+    width: 300rpx;
+    height: 300rpx;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -150rpx;
+    margin-left: -150rpx;
+    z-index: 10;
+}
+.playBtn{
+    width: 120rpx;
+    height: 120rpx;
+    position: absolute;
+    bottom: 100rpx;
+    left: 50%;
+    margin-left: -40rpx;
+    
+}
+.sliderCont{
+    width: 92%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 4%;
+    color: #fff;
+    font-size: 12px;
+    position: relative;
+    bottom: 350rpx;
+}
+.sliderCont text{
+  z-index: 99;
+}
+slider{
+    width: 70%;
+}
+.name{
+    display: flex;
+    flex-direction: column;
+    margin-left: 4%;
+    color: #fff;
+    font-size: 14px;
+    margin-top: -20rpx;
+}
+.musicNa{
+    margin-top: 5rpx;
+    font-size: 13px;
+}
+@keyframes cd{
+    to{
+        transform: rotate(360deg)
+    }
+}
+@keyframes cg{
+    from{
+        transform: rotate(0deg)
+    }
+    to{
+        transform: rotate(-18deg)
+    }
+}
+@keyframes cga{
+    from{
+        transform: rotate(-18deg)
+    }
+    to{
+        transform: rotate(0deg)
+    }
+}
+
+page{
+  width:100%;
+  height: 100%; 
+}
+.bg{
+  width:100%;
+  height: 100%;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.abc{
+  display: flex;
+  justify-content: center;
+}
+.title {
+    width: 70%;
+    line-height: 80rpx;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 44rpx;
+    font-weight:500;
+    color: #fff;
+    position: absolute;
+    top: 50rpx;
+}
+
+.player .normal-player .middle {
+    position: fixed;
+    width: 100%;
+    top: 160rpx;
+    bottom: 300rpx;
+    white-space: nowrap;
+    font-size: 0;
+}
+.player .normal-player .middle .middle-l {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    width: 100%;
+    height: 0!important;
+    padding-top: 80%!important;
+}
+.player .normal-player .middle .middle-l .cd-wrapper {
+    position: absolute;
+    left: 15%;
+    top: 0;
+    width: 70%;
+    height: 90%;
+}
+.player .normal-player .middle .middle-l .cd-wrapper .play {
+    -webkit-animation-play-state: running !important;
+    animation-play-state: running !important;
+}
+.player .normal-player .middle .middle-l .cd-wrapper .pause {
+    -webkit-animation-play-state: paused!important;
+    animation-play-state: paused!important;
+}
+.player .normal-player .middle .middle-l .cd-wrapper .cd {
+  width: 100%;
+  height: 100%;
+  border: 10rpx solid rgba(255,255,255,0.1);
+  border-radius: 50%;
+    -webkit-animation: rotate 20s linear infinite;
+    animation: rotate 20s linear infinite;
+}
+.player .normal-player .middle .middle-l .cd-wrapper .cd .image {
+    position: absolute;
+    left: 0rpx;
+    top: 0rpx;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+@keyframes rotate{
+    0% {
+        transform: rotate(0)
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}

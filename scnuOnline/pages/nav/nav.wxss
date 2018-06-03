@@ -1,0 +1,34 @@
+/* pages/nav/nav.wxss */
+.top{
+  height: 1px;
+  background: #eee;
+}
+.courselists{
+  width: 690rpx;
+  padding: 30rpx;
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px #eee solid;
+}
+.type-pic{
+  width: 130rpx;
+  height: 130rpx;
+}
+.text-box{
+  position: relative;
+  top: 15rpx;
+}
+.course-name{
+  font-size: 34rpx;
+  margin-left: 20rpx;
+  width: 500rpx;
+  color: #515151;
+}
+.course-teacher{
+  font-size: 26rpx;
+  margin-left: 20rpx;
+  margin-top: 10rpx;
+  color: #808080;
+  padding-bottom: 30rpx;
+  width: 500rpx;
+}
