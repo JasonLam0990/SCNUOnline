@@ -1,6 +1,11 @@
 # scnuOnline
 一个通过音频与视频url实现播放的使用本地数据的微信小程序，本demo阉割了那些向后台申请的request，让需要的数据更为清晰，方便前后端的交流
 
+### 华师听听小程序码（长按扫描小程序码查看示例）
+<center>
+ <img src="/project-photo/WechatIMG280.jpg" margin=20% width=30% />
+</center>
+
 ### 主页面主要由 **课程banner图片** 与 **nav动画式导航条三个板块** 下对应的（ **课程音频list，课程视频list，论坛list** ）构成
 
 <center>
